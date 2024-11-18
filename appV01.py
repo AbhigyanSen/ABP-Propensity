@@ -29,6 +29,7 @@ def load_and_train_model():
     cdf = cdf.iloc[:20000]
     # Drop specified columns
     nnfeature = ["UserID","awid",'FirstPlanPurchase','ProfileCreationDate']
+    # nnfeature = ["UserID","awid",'FirstPlanPurchase','ProfileCreationDate', 'InterestSent', 'SalesTeamCallMade', 'City']
     cdf = cdf.drop(columns=nnfeature)
 
     # Replace null values in 'PlanPurchase' with 0, and others with 1
