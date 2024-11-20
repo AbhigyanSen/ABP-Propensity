@@ -95,7 +95,7 @@ def predict():
     try:    
         # Explicit conditions for PlanPurchase
         if input_df['Age'].iloc[0] < 18 or input_df['Age'].iloc[0] > 100:
-            predicted_plan_purchase = 0
+            predicted_plan_purchase = 0 
         else:
             # Transform categorical columns
             for column in input_df.select_dtypes(include=['object']).columns:
@@ -107,11 +107,26 @@ def predict():
 
         # Predict
         predicted_plan_purchase = model.predict(input_scaled)[0]
+        predicted_plan_purchase_proba = model.predict_proba(input_scaled)[0]
+        prob = max(predicted_plan_purchase_proba)
+        prob = round(prob, 2)
+        
+
+        # print(f"1: {predicted_plan_purchase}")
+        # print(f"2: {max(predicted_plan_purchase_proba)}")
 
         # Convert prediction to boolean
         result = bool(predicted_plan_purchase)
+        # print(f"Res: {result}")
+
+        if result == True:
+            prob = prob
+        elif result == False:
+            prob = -1 * prob
+        else:
+            prob = "error"
         
-        return jsonify({'PlanPurchase': result})
+        return jsonify({'PlanPurchase': prob})
     
     except Exception as e:
         return jsonify({'PlanPurchase': str(e)})
