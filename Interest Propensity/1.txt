@@ -1,0 +1,81 @@
+Gender_Source                25.862069      Drop
+Age_Source                   25.862069      Drop
+City_Source                  25.862069      Drop      
+HomeTown_Source              32.183908      Drop
+Occupation_Source            27.586207      Drop      
+Income_Source                43.390805      Drop      
+HighestEducation_Source      26.724138      
+ProfileCreatedBy_Source      25.862069      
+MaritalStatus_Source         25.862069      
+Height_Source                25.862069      
+NoOfPhotosAdded_Source       25.862069
+UserStatus_Source            25.862069
+PhysicalAppearance_Source    37.356322
+Complexion_Source            31.609195
+LivingHouseType_Source       45.114943
+familyIncome_Source          62.356322      "None"
+familyType_Source            28.448276
+Caste_Source                 26.724138
+Mangalik_Source              32.471264
+Gender_Target                29.310345
+Age_Target                   29.310345
+City_Target                  29.885057
+HomeTown_Target              39.080460
+Occupation_Target            31.609195
+Income_Target                54.885057      "None"
+HighestEducation_Target      30.459770
+ProfileCreatedBy_Target      30.747126
+MaritalStatus_Target         29.885057
+Height_Target                29.310345
+NoOfPhotosAdded_Target       29.310345
+UserStatus_Target            29.310345
+PhysicalAppearance_Target    46.839080
+Complexion_Target            34.195402
+LivingHouseType_Target       46.839080
+familyIncome_Target          60.344828      "None"
+familyType_Target            42.241379
+Caste_Target                 31.034483
+Mangalik_Target              37.643678
+
+i have a csv file, i want to drop all the columns except:
+Height_Source, Height_Target, Gender_Target, Gender_Source
+also drop the rows that consists of null values. Save this dataframe as Height_data.csv
+
+now my cloumns: Height_Source, Height_Target are in string format that i.e: like this, 5.00 feet
+5.03 feet,5.06 feet,5.08 feet
+i want these in the format below:
+5.00,5.03,5.06,5.08
+that is remove the feet.
+
+my csv file contains now 4 columns:
+Height_Source,Height_Target,Gender_Target,Gender_Source
+Height_Source refers to the height of an individual whose gender is present in Gender_Source
+Height_Target refers to the height of an individual whose gender is present in Gender_Target
+make a new dataframe which contains 2 columns Height and Gender, correctly map the height and gender in this dataframe
+
+now, what i want is to get the averge height for male and female for this dataframe
+
+Drop these Unique values in column 'Height':
+[Height_Source,Parent,Self,Never Married,Divorced,Electronics/Telecommunication,Widow / Widower,Awaiting Divorce,Mechanical,Relative,Height_Target]
+Unique values in column 'Gender':
+['Male' 'Female']
+
+
+age > Drop rows
+height > average
+rest > None
+
+
+in my csv file in column: 
+Gender_Source remove the rows containing value as 'Gender_Source'
+Gender_Source remove the rows containing value as 'Gender_Source'
+Gender_Source remove the rows containing value as 'Gender_Source'
+Gender_Source remove the rows containing value as 'Gender_Source'
+Gender_Source remove the rows containing value as 'Gender_Source'
+Gender_Source remove the rows containing value as 'Gender_Source'
+Gender_Source remove the rows containing value as 'Gender_Source'
+Gender_Source remove the rows containing value as 'Gender_Source'
+Gender_Source remove the rows containing value as 'Gender_Source'
+
+
+AW69429547,AW89532867 > diff point for the new dataset
